@@ -80,10 +80,10 @@ $rfs-base-font-size-unit: unit($rfs-base-font-size);
   $dividend-unit: unit($dividend);
   $divisor-unit: unit($divisor);
   $unit-map: (
-          "px": 1px,
-          "rem": 1rem,
-          "em": 1em,
-          "%": 1%
+    "px": 1px,
+    "rem": 1rem,
+    "em": 1em,
+    "%": 1%
   );
   @if ($dividend-unit != $divisor-unit and map-has-key($unit-map, $dividend-unit)) {
     $result: $result * map-get($unit-map, $dividend-unit);
