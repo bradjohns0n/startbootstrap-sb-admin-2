@@ -54,7 +54,7 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
 
 // Remove unit from $rfs-breakpoint for calculations
 @if $rfs-breakpoint-unit-cache == "px" {
-  $rfs-breakpoint: $rfs-breakpoint / calc($rfs-breakpoint * 0 + 1);
+  $rfs-breakpoint: $rfs-breakpoint / ($rfs-breakpoint * 0 + 1);
 }
 @else if $rfs-breakpoint-unit-cache == "rem" or $rfs-breakpoint-unit-cache == "em" {
   $rfs-breakpoint: $rfs-breakpoint / calc($rfs-breakpoint * 0 + 1 / $rfs-rem-value);
